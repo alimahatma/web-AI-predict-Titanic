@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1 style="color: rgb(25, 73, 25);"></h1>
+    <form action="{% url 'result' %}">
+        {% csrf_token %}
+
+        <h4>Kelas penumpang:</h4>
+        <p>Proksi untuk status sosial (ekonomi) penumpang 1= Kelas Atas;  2= Menengah; 3=Kelas Bawah;</p>
+        <input type="text" name="pclass">
+
+        <h4>Kelamin:</h4>
+        <p>Jenis Kelamin Penumpang 0 = Perempuan; 1 = Lak-Laki; </p>
+        <input type="text" name="sex">
+
+        <h4>Usia:</h4>
+        <p>Usia Penumpang</p>
+        <input type="text" name="age">
+
+        <h4>Sibsp:</h4>
+        <p>Status Keluarga 0 = saudara kandung atau pasangan;
+            1 = memiliki satu saudara kandung atau pasangan;
+            2 = Penumpang memiliki dua saudara kandung atau pasangan;
+            3 = Penumpang memiliki tiga saudara kandung atau pasangan;
+            4 = Penumpang memiliki empat saudara kandung atau pasangan;
+            5 = Penumpang memiliki lima saudara kandung atau pasangan;
+            6 = Penumpang memiliki enam saudara kandung atau pasangan;
+            7 = Penumpang memiliki tujuh saudara kandung atau pasangan;
+            8 = Penumpang memiliki delapan saudara kandung atau pasangan;
+        </p>
+        <input type="text" name="sibsp">
+
+        <h4>Parch:</h4>
+        <p>0 = Penumpang tidak memiliki orang tua atau anak;
+            1 = Penumpang memiliki satu orang tua atau anak;
+            2 = Penumpang memiliki dua orang tua atau anak;
+            3 = Penumpang memiliki tiga orang tua atau anak;
+            4 = Penumpang memiliki empat orang tua atau anak;
+            5 = Penumpang memiliki lima orang tua atau anak;
+            6 = Penumpang memiliki enam orang tua atau anak;</p>
+        <input type="text" name="parch">
+
+        <h4>Fare:</h4>
+        <p>Faktor Konversi: 1 = 12s = 240d dan 1s = 20d</p>
+        <input type="text" name="fare">
+
+        <h4>Embark Category C:</h4>
+        <p>pelabuhan Cherbourg (C): Prancis 0 = Tidak; 1 = Ya; </p>
+        <input type="text" name="embC">
+
+        <h4>Embark Category Q:</h4>
+        <p>pelabuhan Queenstown (Q):Irlandia 0 = Tidak; 1 = Ya; </p>
+        <input type="text" name="embQ">
+
+        <h4>Embark Category Southampton (S):Inggris 0= Tidak; 1 = Ya; </h4>
+        <input type="text" name="embS">
+
+        <br>
+        <br>
+
+        <input type="submit" name="Predict" value="Prediksi">
+
+
+    </form>
+    
+</body>
+</html>
